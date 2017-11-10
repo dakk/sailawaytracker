@@ -1,7 +1,7 @@
 {
-  "name": "angular1-quickstart",
+  "name": "sailawaytracker",
   "version": "1.0.0",
-  "description": "AngularJS 1.x Boilerplate to kick start your new project",
+  "description": "A web interface to track SailawaySimulator races",
   "readme": "README.md",
   "main": "index.js",
   "scripts": {
@@ -10,14 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madhusudhand/angular1-quickstart"
+    "url": "git+https://github.com/dakk/sailawaytracker"
   },
   "keywords": [
-    "material"
+    "sailaway", "sailing"
   ],
-  "author": "Madhusudhan Dollu",
+  "author": "Davide Gessa",
   "license": "MIT",
-  "homepage": "https://github.com/madhusudhand/angular2-quickstart/blob/master/README.md",
   "devDependencies": {
     "angular-mocks": "^1.5.9",
     "babel-preset-es2015": "^6.18.0",
