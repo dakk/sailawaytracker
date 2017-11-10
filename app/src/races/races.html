@@ -1,0 +1,20 @@
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Start</th>
+            <th></th>
+        </tr>    
+    </thead>
+    <tbody>
+        <tr ng-repeat="r in vm.races | orderBy : 'misnr' : true">
+            <td>{{r.mistitle}}</td>
+            <td>{{r.misstart}}</td>
+            <td>
+                <a class="btn btn-md btn-info" ng-href="/race/{{r.misnr}}">
+                    View
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

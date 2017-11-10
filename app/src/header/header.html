@@ -1,0 +1,14 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Sailaway Races</a>
+    </div>
+
+    <div class="">
+      <ul class="nav navbar-nav">
+          <li ng-class="{active: vm.menu === 'races'}"><a href="/races">Races</a></li>
+          <li ng-class="{active: vm.racename}" ng-if="vm.racename"><a href="">{{vm.racename}}</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

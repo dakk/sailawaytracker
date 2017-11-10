@@ -1,0 +1,50 @@
+{
+  "name": "angular1-quickstart",
+  "version": "1.0.0",
+  "description": "AngularJS 1.x Boilerplate to kick start your new project",
+  "readme": "README.md",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhusudhand/angular1-quickstart"
+  },
+  "keywords": [
+    "material"
+  ],
+  "author": "Madhusudhan Dollu",
+  "license": "MIT",
+  "homepage": "https://github.com/madhusudhand/angular2-quickstart/blob/master/README.md",
+  "devDependencies": {
+    "angular-mocks": "^1.5.9",
+    "babel-preset-es2015": "^6.18.0",
+    "browser-sync": "^2.18.2",
+    "connect-history-api-fallback": "^1.3.0",
+    "eslint": "^3.11.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-watch": "^4.3.11",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.0.2"
+  },
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-leaflet-directive": "^0.10.0",
+    "angular-route": "^1.5.9",
+    "angular-ui-router": "^0.3.2",
+    "bootstrap": "^3.3.7",
+    "d3": "^4.4.0",
+    "jquery": "^3.1.1",
+    "leaflet": "^1.2.0",
+    "leaflet-plugins": "^3.0.1"
+  }
+}

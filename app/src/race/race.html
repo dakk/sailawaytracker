@@ -1,0 +1,31 @@
+<p>Race data are updated every 5 minutes.</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Boat name</th>
+                    <th>Distance</th>
+                    <th>HDG</th>
+                    <th>Speed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="u in vm.leaderboard" ng-mouseleave="vm.overLeave (u.usrname)" ng-mouseenter="vm.overEnter (u.usrname)">
+                    <td>{{u.rank}}</td>
+                    <td>{{u.usrname}}</td>
+                    <td>{{u.ubtname}}</td>
+                    <td>{{u.distance}}</td>
+                    <td>{{u.hdg}}</td>
+                    <td>{{u.speed}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <leaflet width="100%" height="500px" paths="vm.paths" center="vm.center" defaults="vm.defaults" markers="vm.markers" tiles="vm.tiles" layers="vm.layers"></leaflet>
+    </div>
+</div>
