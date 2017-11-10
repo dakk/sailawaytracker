@@ -2,6 +2,7 @@
 
 A web interface to track SailawaySimulator races.
 
+![Screenshoot](https://raw.githubusercontent.com/dakk/sailawaytracker/master/screenshoot.png)
 
 ## Build & run
 
