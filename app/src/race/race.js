@@ -6,14 +6,15 @@
             controllerAs: 'vm'
         });
 
-    RaceController.$inject = ['$rootScope', '$location', '$http', '$routeParams', '$timeout'];
+    RaceController.$inject = ['$rootScope', '$location', '$http', '$routeParams', '$timeout', '$sce'];
 
-    function RaceController($rootScope, $location, $http, $routeParams, $timeout) {
+    function RaceController($rootScope, $location, $http, $routeParams, $timeout, $sce) {
         const vm = this;
 
         vm.leaderboard = null;
         vm.markers = {};
-        vm.pahts = {};
+        vm.paths = {};
+        vm.windyurl = $sce.trustAsResourceUrl('https://mywindy.com/dakk/sailaway-boattracker4?mission=' + $routeParams.id);
 
         const icons = {
             boat: {
@@ -75,7 +76,7 @@
             vm.markers[boat.replace ('-', '')].icon = icons.boat;
         };
 
-        vm.updateRace = () => {
+        /*vm.updateRace = () => {
             $http.get ('api/race_' + $routeParams.id + '.json')
             .then (res => {
                 let latlngs = [];
@@ -98,7 +99,7 @@
             .catch (e => {
 
             });
-        };
+        };*/
             
         vm.updateLeaderboard = () => {
             $http.get ('api/leaderboard_' + $routeParams.id + '.json')
@@ -143,7 +144,7 @@
         };
 
         vm.updateLeaderboard ();
-        vm.updateRace ();
+        //vm.updateRace ();
 
         $timeout (vm.updateLeaderboard, 120000);
     }
