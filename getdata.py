@@ -3,9 +3,10 @@ import json
 import os.path
 
 DEST = "./app/dist/api/"
+BACKEND = "https://backend.sailaway.world/cgi-bin/sailaway/"
 
 for rtype in [0, 1]:
-    r = requests.get ('https://sailaway.world/cgi-bin/sailaway/GetMissions.pl?race=1&tutorial=0&hist=1&racetype=' + str (rtype))
+    r = requests.get (BACKEND + 'GetMissions.pl?race=1&tutorial=0&hist=1&racetype=' + str (rtype))
     try:
         data = r.json ()
     except:
@@ -22,7 +23,7 @@ for rtype in [0, 1]:
             continue
 
         print ('Getting', rid)
-        r = requests.get ('https://sailaway.world/cgi-bin/sailaway/GetLeaderboard.pl?misnr=' + str (rid))
+        r = requests.get (BACKEND + 'GetLeaderboard.pl?misnr=' + str (rid))
         try:
             data = r.json ()
             f = open (DEST + 'leaderboard_' + str (rid) + '.json', 'w')
@@ -38,7 +39,7 @@ for rtype in [0, 1]:
             except:
                 SESSIONID = ""
                 
-            r = requests.get ('https://sailaway.world/cgi-bin/sailaway/GetMission.pl?misnr=' + str (rid), cookies=dict(CGISESSID=SESSIONID))
+            r = requests.get (BACKEND + 'GetMission.pl?misnr=' + str (rid), cookies=dict(CGISESSID=SESSIONID))
 
             try:
                 data = r.json ()
