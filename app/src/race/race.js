@@ -69,11 +69,15 @@
         };
 
         vm.overEnter = (boat) => {
-            vm.markers[boat.replace ('-', '')].icon = icons.boatselect;
+            var n = boat.replace ('-', '');
+            if (n in vm.markers)
+                vm.markers[n].icon = icons.boatselect;
         };
 
         vm.overLeave = (boat) => {
-            vm.markers[boat.replace ('-', '')].icon = icons.boat;
+            var n = boat.replace ('-', '');
+            if (n in vm.markers)
+                vm.markers[n].icon = icons.boat;
         };
 
         /*vm.updateRace = () => {
@@ -133,6 +137,8 @@
 
                     }
                 });
+
+                console.log (vm.markers);
 
                 vm.center = {
                     lat: vm.leaderboard[0].lat,
